@@ -1,7 +1,7 @@
 import { DataTypes, Sequelize } from 'sequelize';
 
 module.exports = (sequelize: Sequelize) => {
-  sequelize.define('user', {
+  sequelize.define('User', {
     firstname: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -19,5 +19,9 @@ module.exports = (sequelize: Sequelize) => {
       allowNull: false,
       unique: true
     },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   });
 };
